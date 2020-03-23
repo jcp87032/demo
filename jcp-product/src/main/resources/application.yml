@@ -1,0 +1,12 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: jcp-product
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6699/eureka/

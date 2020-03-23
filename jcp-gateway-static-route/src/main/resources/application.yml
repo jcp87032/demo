@@ -1,0 +1,19 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: jcp-gateway-static-route
+# 注册中心配置
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6699/eureka/
+#路由
+zuul:
+  routes:
+    product-service:
+      path: /product/**
+      serviceId: jcp-product
+      strip-prefix: false
