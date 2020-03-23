@@ -25,6 +25,7 @@ public class DynamicRouteController {
     //获取网关所有的路由信息
     @RequestMapping("/routes")
     public Flux<RouteDefinition> getRouteDefinitions(){
+        System.out.println("拉取网关所有路由信息...");
         return routeDefinitionLocator.getRouteDefinitions();
     }
 
