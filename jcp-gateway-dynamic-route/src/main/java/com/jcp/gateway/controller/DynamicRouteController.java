@@ -5,6 +5,7 @@ package com.jcp.gateway.controller;
  * @date 2020/3/20 16:40
  */
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionLocator;
@@ -17,6 +18,7 @@ import reactor.core.publisher.Flux;
  */
 @RestController
 @RequestMapping("/dynamic-route")
+@Slf4j
 public class DynamicRouteController {
 
     @Autowired
