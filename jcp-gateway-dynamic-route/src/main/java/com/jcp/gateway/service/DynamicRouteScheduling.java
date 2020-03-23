@@ -42,7 +42,7 @@ public class DynamicRouteScheduling {
     @Scheduled(cron = "*/60 * * * * ?")
     public void getDynamicRouteInfo(){
         try{
-            System.out.println("拉取时间:" + dateFormat.format(new Date()));
+            System.out.println("拉取时间->" + dateFormat.format(new Date()));
             //先拉取版本信息，如果版本号不想等则更新路由
             Long resultVersionId = restTemplate.getForObject("http://"+ dynamicRouteServerName +"/version/lastVersion" , Long.class);
             System.out.println("路由版本信息：本地版本号：" + versionId + "，远程版本号：" + resultVersionId);
