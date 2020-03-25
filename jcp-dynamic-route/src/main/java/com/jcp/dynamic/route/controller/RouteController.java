@@ -17,7 +17,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/route")
-@Api(description = "路由管理")
+@Api(description = "路由管理api")
 public class RouteController {
     @Autowired
     private RouteService routeService;
